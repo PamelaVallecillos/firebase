@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "408311919237",
+    "project_id": "pruebafirebase-af088",
+    "storage_bucket": "pruebafirebase-af088.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:408311919237:android:972389ee516407d0e32fec",
+        "android_client_info": {
+          "package_name": "com.example.flutter_application_1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCH_PFu40SkWl01UO8klE-kDIn5A1OzmiM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
