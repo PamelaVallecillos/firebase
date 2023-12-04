@@ -1,18 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:firebase_core/firebase_core.dart';
-import 'package:flutter_application_1/widgets/nuevo.dart';
-import 'package:flutter_application_1/widgets/home.dart';
-import 'firebase_options.dart';
+import 'package:hive_flutter/hive_flutter.dart';
+import 'pages/home_page.dart';
 
+void main() async {
+  await Hive.initFlutter();
 
-void main() async{
-  WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
- 
+  var box = await Hive.openBox('mybox');
+
   runApp(const MyApp());
-} 
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -21,14 +17,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: "Flutter y Firebase",
-      initialRoute: '/',
-      routes: {
-        "/": (context) => const MyHomePage(),
-        '/add': (context) => const NuevaPersona()
-      },
+      home: HomePage(),
+      theme: ThemeData(primarySwatch: Colors.blue),
     );
   }
 }
-
-
